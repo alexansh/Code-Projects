@@ -2,11 +2,11 @@
 #include <ESP8266HTTPClient.h>
 
 // WiFi credentials
-const char* ssid = "home-fib";
-const char* password = "sofatable";
+const char* ssid = "your ssid";
+const char* password = "your password";
 
 // Discord webhook URL
-const char* webhookUrl = "https://discord.com/api/webhooks/1438225390740181016/kMD0Lvv4KWiNy06vNqzXVFXGZlNDilZMnK-UYGv0bzwHg4QTk7LxG_zNNdipXy3bBfBt";
+const char* webhookUrl = "discord webhook url goes here";
 
 // Pin definitions
 const int ledPin = D1;        // Night light
@@ -87,9 +87,8 @@ void sendDiscordAlert(String message) {
   WiFiClient client;
   HTTPClient http;
 
-  String webhookUrl = "https://discord.com/api/webhooks/1438225390740181016/kMD0Lvv4KWiNy06vNqzXVFXGZlNDilZMnK-UYGv0bzwHg4QTk7LxG_zNNdipXy3bBfBt";  // Replace with your actual webhook URL
+  String webhookUrl = "disord webhook url goes here"; 
 
-  // ✅ New correct way to start the HTTP request
   http.begin(client, webhookUrl);
 
   http.addHeader("Content-Type", "application/json");
